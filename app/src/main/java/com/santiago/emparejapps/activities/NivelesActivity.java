@@ -17,6 +17,7 @@ public class NivelesActivity extends AppCompatActivity {
     public void jugar(View view) {
         switch (view.getId()){
 
+
         }
     }
 }
