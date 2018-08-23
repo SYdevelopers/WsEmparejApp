@@ -31,7 +31,7 @@ public class JuegoConfigActivity extends AppCompatActivity {
     private MediaPlayer player;
     private Random random=new Random();
     private CountDownTimer downTimer ;
-    private int primeraCarta,segundaCarta,primeraSeleccion,segundaSelccion,turno,numeroCarta=1,puntosJ1=0,puntosJ2=0;
+    private int primeraCarta,segundaCarta,primeraSeleccion,segundaSelccion,turno,numeroCarta=1,puntosJ1=0,puntosJ2=0,intentos;
     private String nivel="config";
     long tiempoJuego,mil=1000;
 
@@ -82,14 +82,16 @@ public class JuegoConfigActivity extends AppCompatActivity {
                     puntaje.setNombre(nomJ1.getText().toString());
                     puntaje.setPuntos(puntosJ1);
                     puntaje.setNivel(nivel);
-                    puntaje.setTiempo(tiempo.getText().toString());
+                    puntaje.setTiempo(String.valueOf(tiempoJuego));
+                    puntaje.setIntentos(intentos);
                 }else{
                     puntaje.setNombre(nomJ2.getText().toString());
                     puntaje.setPuntos(puntosJ2);
                     puntaje.setNivel(nivel);
-                    puntaje.setTiempo(tiempo.getText().toString());
+                    puntaje.setTiempo(String.valueOf(tiempoJuego));
+                    puntaje.setIntentos(intentos);
                 }
-                if (datos.guardarPuntaje(puntaje)){
+                if (datos.guardarPuntajeConfig(puntaje)){
                     Toast.makeText(JuegoConfigActivity.this, "guardo", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(JuegoConfigActivity.this, "no guardo", Toast.LENGTH_SHORT).show();
@@ -234,6 +236,7 @@ public class JuegoConfigActivity extends AppCompatActivity {
 
 
     public void imagenSeleccionada(View view) {
+        intentos++;
         int tag =Integer.parseInt((String) view.getTag());
         if (view.getId()==img1.getId()){
             asignarParejas(img1,tag);
@@ -480,20 +483,24 @@ public class JuegoConfigActivity extends AppCompatActivity {
                 img16.getVisibility()==View.INVISIBLE){
 
             downTimer.cancel();
+            int t = Integer.parseInt(tiempo.getText().toString());
+            int timeBD= (int) (tiempoJuego-t);
             Datos datos=new Datos(this);
             Puntaje puntaje=new Puntaje();
             if (puntosJ1>puntosJ2){
                 puntaje.setNombre(nomJ1.getText().toString());
                 puntaje.setPuntos(puntosJ1);
                 puntaje.setNivel(nivel);
-                puntaje.setTiempo(tiempo.getText().toString());
+                puntaje.setTiempo(String.valueOf(timeBD));
+                puntaje.setIntentos(intentos);
             }else{
                 puntaje.setNombre(nomJ2.getText().toString());
                 puntaje.setPuntos(puntosJ2);
                 puntaje.setNivel(nivel);
-                puntaje.setTiempo(tiempo.getText().toString());
+                puntaje.setTiempo(String.valueOf(timeBD));
+                puntaje.setIntentos(intentos);
             }
-            if (datos.guardarPuntaje(puntaje)){
+            if (datos.guardarPuntajeConfig(puntaje)){
                 Toast.makeText(this, "guardo", Toast.LENGTH_SHORT).show();
             }else{
                 Toast.makeText(this, "no guardo", Toast.LENGTH_SHORT).show();
