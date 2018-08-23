@@ -2,6 +2,7 @@ package com.santiago.emparejapps.activities;
 
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -97,7 +98,7 @@ public class JuegoDificilActivity extends AppCompatActivity {
 
     private void inicializar() {
         nomJ1=findViewById(R.id.nombreJ1);
-        nomJ2=findViewById(R.id.nomJ2);
+        nomJ2=findViewById(R.id.nombreJ2);
         nomJ1.setText(Puntaje.nomJ1);
         nomJ2.setText(Puntaje.nomJ2);
         puntJ1=findViewById(R.id.puntosJ1);
@@ -182,5 +183,253 @@ public class JuegoDificilActivity extends AppCompatActivity {
 
 
     public void imagenSeleccionada(View view) {
+        int tag =Integer.parseInt((String) view.getTag());
+        if (view.getId()==img1.getId()){
+            asignarParejas(img1,tag);
+        }
+        if (view.getId()==img2.getId()){
+            asignarParejas(img2,tag);
+        }
+        if (view.getId()==img3.getId()){
+            asignarParejas(img3,tag);
+        }
+        if (view.getId()==img4.getId()){
+            asignarParejas(img4,tag);
+        }
+        if (view.getId()==img5.getId()){
+            asignarParejas(img5,tag);
+        }
+        if (view.getId()==img6.getId()){
+            asignarParejas(img6,tag);
+        }
+        if (view.getId()==img7.getId()){
+            asignarParejas(img7,tag);
+        }
+        if (view.getId()==img8.getId()){
+            asignarParejas(img8,tag);
+        }
+        if (view.getId()==img9.getId()){
+            asignarParejas(img9,tag);
+        }
+        if (view.getId()==img10.getId()){
+            asignarParejas(img10,tag);
+        }
+        if (view.getId()==img11.getId()){
+            asignarParejas(img11,tag);
+        }
+        if (view.getId()==img12.getId()){
+            asignarParejas(img12,tag);
+        }
+        if (view.getId()==img13.getId()){
+            asignarParejas(img13,tag);
+        }
+        if (view.getId()==img14.getId()){
+            asignarParejas(img14,tag);
+        }
+        if (view.getId()==img15.getId()){
+            asignarParejas(img15,tag);
+        }
+        if (view.getId()==img16.getId()){
+            asignarParejas(img16,tag);
+        }
+    }
+
+    private void asignarParejas(ImageView img, int tag) {
+        switch (cartasArray[tag]){
+            case 11:img.setImageResource(R.drawable.i1);
+                break;
+            case 12:img.setImageResource(R.drawable.i2);
+                break;
+            case 13:img.setImageResource(R.drawable.i3);
+                break;
+            case 14:img.setImageResource(R.drawable.i4);
+                break;
+            case 15:img.setImageResource(R.drawable.i5);
+                break;
+            case 16:img.setImageResource(R.drawable.i6);
+                break;
+            case 17:img.setImageResource(R.drawable.i7);
+                break;
+            case 18:img.setImageResource(R.drawable.i8);
+                break;
+            case 21:img.setImageResource(R.drawable.i10);
+                break;
+            case 22:img.setImageResource(R.drawable.i20);
+                break;
+            case 23:img.setImageResource(R.drawable.i30);
+                break;
+            case 24:img.setImageResource(R.drawable.i40);
+                break;
+            case 25:img.setImageResource(R.drawable.i50);
+                break;
+            case 26:img.setImageResource(R.drawable.i60);
+                break;
+            case 27:img.setImageResource(R.drawable.i70);
+                break;
+            case 28:img.setImageResource(R.drawable.i80);
+                break;
+        }
+        if (numeroCarta==1){
+            primeraCarta=cartasArray[tag];
+            if (primeraCarta>20){
+                primeraCarta=primeraCarta-10;
+            }
+            numeroCarta=2;
+            img.setEnabled(false);
+            primeraSeleccion=tag;
+        }else if (numeroCarta==2){
+            segundaCarta=cartasArray[tag];
+            if (segundaCarta>20){
+                segundaCarta=segundaCarta-10;
+            }
+            numeroCarta=1;
+            desabilitarCartas();
+            segundaSelccion=tag;
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    verificarSelccion();
+                }
+            },1000);
+
+        }
+    }
+
+    private void verificarSelccion() {
+        if (primeraCarta==segundaCarta){
+            player=MediaPlayer.create(this,R.raw.win);
+            player.start();
+
+            switch (primeraSeleccion){
+                case 0:img1.setVisibility(View.INVISIBLE);
+                    break;
+                case 1:img2.setVisibility(View.INVISIBLE);
+                    break;
+                case 2:img3.setVisibility(View.INVISIBLE);
+                    break;
+                case 3:img4.setVisibility(View.INVISIBLE);
+                    break;
+                case 4:img5.setVisibility(View.INVISIBLE);
+                    break;
+                case 5:img6.setVisibility(View.INVISIBLE);
+                    break;
+                case 6:img7.setVisibility(View.INVISIBLE);
+                    break;
+                case 7:img8.setVisibility(View.INVISIBLE);
+                    break;
+                case 8:img9.setVisibility(View.INVISIBLE);
+                    break;
+                case 9:img10.setVisibility(View.INVISIBLE);
+                    break;
+                case 10:img11.setVisibility(View.INVISIBLE);
+                    break;
+                case 11:img12.setVisibility(View.INVISIBLE);
+                    break;
+                case 12:img13.setVisibility(View.INVISIBLE);
+                    break;
+                case 13:img14.setVisibility(View.INVISIBLE);
+                    break;
+                case 14:img15.setVisibility(View.INVISIBLE);
+                    break;
+                case 15:img16.setVisibility(View.INVISIBLE);
+                    break;
+            }
+
+            switch (segundaSelccion){
+                case 0:img1.setVisibility(View.INVISIBLE);
+                    break;
+                case 1:img2.setVisibility(View.INVISIBLE);
+                    break;
+                case 2:img3.setVisibility(View.INVISIBLE);
+                    break;
+                case 3:img4.setVisibility(View.INVISIBLE);
+                    break;
+                case 4:img5.setVisibility(View.INVISIBLE);
+                    break;
+                case 5:img6.setVisibility(View.INVISIBLE);
+                    break;
+                case 6:img7.setVisibility(View.INVISIBLE);
+                    break;
+                case 7:img8.setVisibility(View.INVISIBLE);
+                    break;
+                case 8:img9.setVisibility(View.INVISIBLE);
+                    break;
+                case 9:img10.setVisibility(View.INVISIBLE);
+                    break;
+                case 10:img11.setVisibility(View.INVISIBLE);
+                    break;
+                case 11:img12.setVisibility(View.INVISIBLE);
+                    break;
+                case 12:img13.setVisibility(View.INVISIBLE);
+                    break;
+                case 13:img14.setVisibility(View.INVISIBLE);
+                    break;
+                case 14:img15.setVisibility(View.INVISIBLE);
+                    break;
+                case 15:img16.setVisibility(View.INVISIBLE);
+                    break;
+            }
+            if (turno==1){
+                puntosJ1=puntosJ1+100;
+                puntJ1.setText(puntosJ1+"");
+            }else if (turno==2){
+                puntosJ2=puntosJ2+100;
+                puntJ2.setText(puntosJ2+"");
+            }
+
+        }else{
+            player=MediaPlayer.create(this,R.raw.lose);
+            player.start();
+            voltearCartas();
+            if (turno==1){
+                turno=2;
+                puntosJ1=puntosJ1-2;
+                if (puntosJ1<=0){
+                    puntosJ1=0;
+                }
+                puntJ1.setText(puntosJ1+"");
+                nomJ1.setTextColor(Color.GRAY);
+                puntJ1.setTextColor(Color.GRAY);
+                nomJ2.setTextColor(Color.BLACK);
+                puntJ2.setTextColor(Color.BLACK);
+            }else if (turno==2){
+                turno=1;
+                puntosJ2=puntosJ2-2;
+                if (puntosJ2<=0){
+                    puntosJ2=0;
+                }
+                puntJ2.setText(puntosJ2+"");
+                nomJ1.setTextColor(Color.BLACK);
+                puntJ1.setTextColor(Color.BLACK);
+                nomJ2.setTextColor(Color.GRAY);
+                puntJ2.setTextColor(Color.GRAY);
+            }
+        }
+        habilitarCartas();
+        verificarUltimaCarta();
+    }
+
+    private void verificarUltimaCarta() {
+        if (img1.getVisibility()==View.INVISIBLE &&
+            img2.getVisibility()==View.INVISIBLE &&
+            img3.getVisibility()==View.INVISIBLE &&
+            img4.getVisibility()==View.INVISIBLE &&
+            img5.getVisibility()==View.INVISIBLE &&
+            img6.getVisibility()==View.INVISIBLE &&
+            img7.getVisibility()==View.INVISIBLE &&
+            img8.getVisibility()==View.INVISIBLE &&
+            img9.getVisibility()==View.INVISIBLE &&
+            img10.getVisibility()==View.INVISIBLE &&
+            img11.getVisibility()==View.INVISIBLE &&
+            img12.getVisibility()==View.INVISIBLE &&
+            img13.getVisibility()==View.INVISIBLE &&
+            img14.getVisibility()==View.INVISIBLE &&
+            img15.getVisibility()==View.INVISIBLE &&
+            img16.getVisibility()==View.INVISIBLE){
+            tiempo.stop();
+
+        }
+
     }
 }

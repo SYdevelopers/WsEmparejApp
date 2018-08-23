@@ -51,24 +51,28 @@
         <ImageView
             android:id="@+id/imgDificil_5"
             android:layout_width="0dp"
+            android:onClick="imagenSeleccionada"
             android:layout_weight="1"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/imgDificil_6"
             android:layout_width="0dp"
+            android:onClick="imagenSeleccionada"
             android:layout_weight="1"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/imgDificil_7"
             android:layout_width="0dp"
+            android:onClick="imagenSeleccionada"
             android:layout_weight="1"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/imgDificil_8"
             android:layout_width="0dp"
+            android:onClick="imagenSeleccionada"
             android:layout_weight="1"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
@@ -85,24 +89,28 @@
             android:id="@+id/imgDificil_9"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:onClick="imagenSeleccionada"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/imgDificil_10"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:onClick="imagenSeleccionada"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/imgDificil_11"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:onClick="imagenSeleccionada"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/imgDificil_12"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:onClick="imagenSeleccionada"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
 
@@ -117,11 +125,13 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:src="@drawable/no"
+            android:onClick="imagenSeleccionada"
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/imgDificil_14"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:onClick="imagenSeleccionada"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
@@ -129,11 +139,13 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:src="@drawable/no"
+            android:onClick="imagenSeleccionada"
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/imgDificil_16"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:onClick="imagenSeleccionada"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
 
