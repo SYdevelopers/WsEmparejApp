@@ -24,17 +24,17 @@ public class Constantes implements BaseColumns {
         AlertDialog.Builder builder=new AlertDialog.Builder(activity);
         builder.setTitle("Resultados")
                 .setMessage(message)
-                .setNegativeButton("Terminar", new DialogInterface.OnClickListener() {
+                .setNegativeButton("twitter", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .setNeutralButton("Terminar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
                         activity.finish();
-                    }
-                })
-                .setNeutralButton("twitter", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
                     }
                 })
                 .setPositiveButton("facebook", new DialogInterface.OnClickListener() {

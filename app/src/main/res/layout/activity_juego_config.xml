@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.JuegoNormalActivity">
+    android:layout_height="match_parent"
+    tools:context=".activities.JuegoConfigActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,27 +14,33 @@
         android:layout_height="0dp">
 
         <ImageView
-            android:id="@+id/imgNormal_1"
+            android:id="@+id/imgConfig_1"
             android:layout_width="0dp"
             android:onClick="imagenSeleccionada"
             android:layout_weight="1"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
-            android:id="@+id/imgNormal_2"
+            android:id="@+id/imgConfig_2"
             android:onClick="imagenSeleccionada"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
-            android:id="@+id/imgNormal_3"
+            android:id="@+id/imgConfig_3"
             android:onClick="imagenSeleccionada"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
-
+        <ImageView
+            android:id="@+id/imgConfig_4"
+            android:onClick="imagenSeleccionada"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
 
 
     </LinearLayout>
@@ -44,27 +51,33 @@
 
 
         <ImageView
-            android:id="@+id/imgNormal_4"
+            android:id="@+id/imgConfig_5"
             android:layout_width="0dp"
             android:onClick="imagenSeleccionada"
             android:layout_weight="1"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
-            android:id="@+id/imgNormal_5"
+            android:id="@+id/imgConfig_6"
             android:layout_width="0dp"
             android:onClick="imagenSeleccionada"
             android:layout_weight="1"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
-            android:id="@+id/imgNormal_6"
+            android:id="@+id/imgConfig_7"
             android:layout_width="0dp"
             android:onClick="imagenSeleccionada"
             android:layout_weight="1"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
-
+        <ImageView
+            android:id="@+id/imgConfig_8"
+            android:layout_width="0dp"
+            android:onClick="imagenSeleccionada"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
@@ -75,27 +88,33 @@
 
 
         <ImageView
-            android:id="@+id/imgNormal_7"
+            android:id="@+id/imgConfig_9"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:onClick="imagenSeleccionada"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
-            android:id="@+id/imgNormal_8"
+            android:id="@+id/imgConfig_10"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:onClick="imagenSeleccionada"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
-            android:id="@+id/imgNormal_9"
+            android:id="@+id/imgConfig_11"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:onClick="imagenSeleccionada"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
-
+        <ImageView
+            android:id="@+id/imgConfig_12"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="imagenSeleccionada"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
     <LinearLayout
@@ -104,27 +123,33 @@
         android:layout_height="0dp">
 
         <ImageView
-            android:id="@+id/imgNormal_10"
+            android:id="@+id/imgConfig_13"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:src="@drawable/no"
             android:onClick="imagenSeleccionada"
             android:layout_height="match_parent" />
         <ImageView
-            android:id="@+id/imgNormal_11"
+            android:id="@+id/imgConfig_14"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:onClick="imagenSeleccionada"
             android:src="@drawable/no"
             android:layout_height="match_parent" />
         <ImageView
-            android:id="@+id/imgNormal_12"
+            android:id="@+id/imgConfig_15"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:src="@drawable/no"
             android:onClick="imagenSeleccionada"
             android:layout_height="match_parent" />
-
+        <ImageView
+            android:id="@+id/imgConfig_16"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="imagenSeleccionada"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
     <LinearLayout
@@ -143,11 +168,13 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent" />
-        <Chronometer
-            android:id="@+id/tiempoN"
+
+        <TextView
+            android:id="@+id/tiempoC"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent" />
+
         <TextView
             android:id="@+id/nombreJ2"
             android:layout_width="0dp"
@@ -161,6 +188,5 @@
 
 
     </LinearLayout>
-
 
 </LinearLayout>
