@@ -4,6 +4,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".activities.PuntajesActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/lista_f" />
+
+                <ListView
+                    android:id="@+id/lista_facil"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:background="@drawable/lista_facil" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/lista_m" />
+
+                <ListView
+                    android:id="@+id/lista_medio"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:background="@drawable/lista_medio" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/lista_d" />
+
+                <ListView
+                    android:id="@+id/lista_dificil"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:background="@drawable/lista_dificil" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/lista_c" />
+
+                <ListView
+                    android:id="@+id/lista_configuracion"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:background="@drawable/lista_config" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

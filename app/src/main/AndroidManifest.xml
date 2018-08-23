@@ -24,6 +24,10 @@
         <activity android:name=".activities.JuegoDificilActivity" />
         <activity android:name=".activities.JuegoNormalActivity" />
         <activity android:name=".activities.JuegoFacilActivity"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
