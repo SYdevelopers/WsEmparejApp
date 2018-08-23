@@ -31,7 +31,7 @@ public class JuegoConfigActivity extends AppCompatActivity {
     private MediaPlayer player;
     private Random random=new Random();
     private CountDownTimer downTimer ;
-    private int primeraCarta,segundaCarta,primeraSeleccion,segundaSelccion,turno,numeroCarta=1,puntosJ1=0,puntosJ2=0,intentos;
+    private int primeraCarta,segundaCarta,primeraSeleccion,segundaSelccion,turno,numeroCarta=1,puntosJ1=0,puntosJ2=0,intentosJ1,intentosJ2;
     private String nivel="config";
     long tiempoJuego,mil=1000;
 
@@ -83,13 +83,13 @@ public class JuegoConfigActivity extends AppCompatActivity {
                     puntaje.setPuntos(puntosJ1);
                     puntaje.setNivel(nivel);
                     puntaje.setTiempo(String.valueOf(tiempoJuego));
-                    puntaje.setIntentos(intentos);
+                    puntaje.setIntentos(intentosJ1);
                 }else{
                     puntaje.setNombre(nomJ2.getText().toString());
                     puntaje.setPuntos(puntosJ2);
                     puntaje.setNivel(nivel);
                     puntaje.setTiempo(String.valueOf(tiempoJuego));
-                    puntaje.setIntentos(intentos);
+                    puntaje.setIntentos(intentosJ2);
                 }
                 if (datos.guardarPuntajeConfig(puntaje)){
                     Toast.makeText(JuegoConfigActivity.this, "guardo", Toast.LENGTH_SHORT).show();
@@ -236,7 +236,12 @@ public class JuegoConfigActivity extends AppCompatActivity {
 
 
     public void imagenSeleccionada(View view) {
-        intentos++;
+        if (turno==1){
+            intentosJ1++;
+        }else {
+            intentosJ2++;
+        }
+
         int tag =Integer.parseInt((String) view.getTag());
         if (view.getId()==img1.getId()){
             asignarParejas(img1,tag);
@@ -492,13 +497,13 @@ public class JuegoConfigActivity extends AppCompatActivity {
                 puntaje.setPuntos(puntosJ1);
                 puntaje.setNivel(nivel);
                 puntaje.setTiempo(String.valueOf(timeBD));
-                puntaje.setIntentos(intentos);
+                puntaje.setIntentos(intentosJ1);
             }else{
                 puntaje.setNombre(nomJ2.getText().toString());
                 puntaje.setPuntos(puntosJ2);
                 puntaje.setNivel(nivel);
                 puntaje.setTiempo(String.valueOf(timeBD));
-                puntaje.setIntentos(intentos);
+                puntaje.setIntentos(intentosJ1);
             }
             if (datos.guardarPuntajeConfig(puntaje)){
                 Toast.makeText(this, "guardo", Toast.LENGTH_SHORT).show();

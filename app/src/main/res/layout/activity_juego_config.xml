@@ -212,13 +212,16 @@
                 android:id="@+id/nombreJ1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/puntosJ1"
                 android:layout_width="0dp"
+                android:gravity="center"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="0" />
         </LinearLayout>
 
         <LinearLayout
@@ -233,14 +236,17 @@
             <TextView
                 android:id="@+id/puntosJ2"
                 android:layout_width="0dp"
+                android:gravity="center"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="0" />
 
             <TextView
                 android:id="@+id/nombreJ2"
                 android:layout_width="0dp"
+                android:gravity="center"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"/>
         </LinearLayout>
 
 

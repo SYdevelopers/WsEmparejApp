@@ -13,7 +13,6 @@
         android:layout_marginLeft="39dp"
         android:layout_marginRight="287dp"
         android:layout_marginStart="39dp"
-        android:text="21656513"
         android:layout_marginTop="20dp"
         android:textColor="?attr/colorAccent"
         android:textSize="20sp"
@@ -29,7 +28,6 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="287dp"
         android:layout_marginLeft="39dp"
-        android:text="546565656"
         android:layout_marginRight="287dp"
         android:layout_marginStart="39dp"
         android:layout_marginTop="20dp"
@@ -52,7 +50,6 @@
         android:layout_marginTop="48dp"
         android:textColor="?attr/colorAccent"
         android:textSize="24sp"
-        android:text="56465"
         android:textStyle="bold"
         app:fontFamily="@font/biryani_extrabold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +68,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contentTiempo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

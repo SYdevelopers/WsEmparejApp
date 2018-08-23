@@ -16,8 +16,8 @@ public class PuntajesActivity extends AppCompatActivity {
     private Cursor cursor;
     private SimpleCursorAdapter adapter;
     private Datos datos;
-    private String camposBD[]={Constantes.NOMBRE,Constantes.PUNTOS};
-    private int camposUI[]={R.id.textView_nombre,R.id.textView_puntajes};
+    private final String CAMPOSBD[]={Constantes.NOMBRE,Constantes.PUNTOS};
+    private final int CAMPOSUI[]={R.id.textView_nombre,R.id.textView_puntajes};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,30 +27,32 @@ public class PuntajesActivity extends AppCompatActivity {
         llenarListaFacil(listaFacil);
         llenarListaNormal(listaNormal);
         llenarListaDificil(listaDificil);
-        //llenarListaConfig(listaConfig);
+        llenarListaConfig(listaConfig);
     }
 
     private void llenarListaFacil(ListView lista) {
         cursor=datos.listarJuegoFacil();
-        adapter=new SimpleCursorAdapter(this,R.layout.plantilla_lista,cursor,camposBD,camposUI);
+        adapter=new SimpleCursorAdapter(this,R.layout.plantilla_lista,cursor,CAMPOSBD,CAMPOSUI);
         lista.setAdapter(adapter);
     }
     private void llenarListaNormal(ListView lista) {
         cursor=datos.listarJuegoNormal();
-        adapter=new SimpleCursorAdapter(this,R.layout.plantilla_lista,cursor,camposBD,camposUI);
+        adapter=new SimpleCursorAdapter(this,R.layout.plantilla_lista,cursor,CAMPOSBD,CAMPOSUI);
         lista.setAdapter(adapter);
     }
     private void llenarListaDificil(ListView lista) {
         cursor=datos.listarJuegoDificil();
-        adapter=new SimpleCursorAdapter(this,R.layout.plantilla_lista,cursor,camposBD,camposUI);
+        adapter=new SimpleCursorAdapter(this,R.layout.plantilla_lista,cursor,CAMPOSBD,CAMPOSUI);
         lista.setAdapter(adapter);
     }
-//    private void llenarListaConfig(ListView lista) {
-//        cursor=datos.listarJuegoConfig();
-//
-//        adapter=new SimpleCursorAdapter(this,R.layout.plantilla_lista,cursor,camposBD,camposUI);
-//        lista.setAdapter(adapter);
-//    }
+    private void llenarListaConfig(ListView lista) {
+        cursor=datos.listarJuegoConfig();
+        String camposBD[]={Constantes.NOMBRE,Constantes.PUNTOS,Constantes.TIEMPO,Constantes.INTENTOS};
+        int camposUI[]={R.id.contentNombre,R.id.contentPuntos,R.id.contentTiempo,R.id.contentIntentos};
+
+        adapter=new SimpleCursorAdapter(this,R.layout.plantilla_lista_config,cursor,camposBD,camposUI);
+        lista.setAdapter(adapter);
+    }
 
     private void inicializar() {
         listaFacil=findViewById(R.id.lista_facil);
