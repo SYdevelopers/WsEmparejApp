@@ -1,9 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".activities.JuegoDificilActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="0dp">
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imgDificil_1"
+            android:layout_width="0dp"
+            android:onClick="imagenSeleccionada"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgDificil_2"
+            android:onClick="imagenSeleccionada"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgDificil_3"
+            android:onClick="imagenSeleccionada"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgDificil_4"
+            android:onClick="imagenSeleccionada"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="0dp">
+
+
+        <ImageView
+            android:id="@+id/imgDificil_5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgDificil_6"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgDificil_7"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgDificil_8"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+
+      </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="0dp">
+
+
+        <ImageView
+            android:id="@+id/imgDificil_9"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgDificil_10"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgDificil_11"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgDificil_12"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:id="@+id/imgDificil_13"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgDificil_14"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgDificil_15"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgDificil_16"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/no"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+        android:layout_height="0dp">
+
+
+        <TextView
+            android:id="@+id/nombreJ1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/puntosJ1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <Chronometer
+            android:id="@+id/tiempoD"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/nombreJ2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/puntosJ2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
