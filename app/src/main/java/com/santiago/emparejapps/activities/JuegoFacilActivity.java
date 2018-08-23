@@ -34,7 +34,7 @@ public class JuegoFacilActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_juego_normal);
+        setContentView(R.layout.activity_juego_facil);
         inicializar();
         barajarCartas();
         asignarTags();

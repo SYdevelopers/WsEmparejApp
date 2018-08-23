@@ -33,7 +33,7 @@ public class JuegoConfigActivity extends AppCompatActivity {
     private CountDownTimer downTimer ;
     private int primeraCarta,segundaCarta,primeraSeleccion,segundaSelccion,turno,numeroCarta=1,puntosJ1=0,puntosJ2=0;
     private String nivel="config";
-    private long tiempoJuego,mil=1000;
+    long tiempoJuego,mil=1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,9 +64,9 @@ public class JuegoConfigActivity extends AppCompatActivity {
     }
 
     private void iniciarTiempo(Bundle bundle) {
-        tiempoJuego=bundle.getLong("tiempo");
-        long time=tiempoJuego*1000;
-        downTimer=new CountDownTimer(time,mil) {
+        String time=bundle.getString("tiempo");
+        tiempoJuego=Long.parseLong(time)*1000;
+        downTimer=new CountDownTimer(tiempoJuego,mil) {
             @Override
             public void onTick(long l) {
                 int t= (int) (l/mil);
@@ -75,6 +75,7 @@ public class JuegoConfigActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                tiempo.setText("0");
                 Datos datos=new Datos(JuegoConfigActivity.this);
                 Puntaje puntaje=new Puntaje();
                 if (puntosJ1>puntosJ2){
@@ -95,7 +96,7 @@ public class JuegoConfigActivity extends AppCompatActivity {
                 }
                 String message=nomJ1.getText().toString()+":"+puntosJ1 +"\n"+
                         nomJ2.getText().toString()+":"+puntosJ2 +"\n"+
-                        "Tiempo Restante: "+tiempo.getText().toString();
+                        "Tiempo Restante: 0";
 
                 Constantes.dialogo(JuegoConfigActivity.this,message);
 
@@ -155,22 +156,22 @@ public class JuegoConfigActivity extends AppCompatActivity {
         puntJ2=findViewById(R.id.puntosJ2);
         tiempo=findViewById(R.id.tiempoC);
 
-        img1=findViewById(R.id.imgDificil_1);
-        img2=findViewById(R.id.imgDificil_2);
-        img3=findViewById(R.id.imgDificil_3);
-        img4=findViewById(R.id.imgDificil_4);
-        img5=findViewById(R.id.imgDificil_5);
-        img6=findViewById(R.id.imgDificil_6);
-        img7=findViewById(R.id.imgDificil_7);
-        img8=findViewById(R.id.imgDificil_8);
-        img9=findViewById(R.id.imgDificil_9);
-        img10=findViewById(R.id.imgDificil_10);
-        img11=findViewById(R.id.imgDificil_11);
-        img12=findViewById(R.id.imgDificil_12);
-        img13=findViewById(R.id.imgDificil_13);
-        img14=findViewById(R.id.imgDificil_14);
-        img15=findViewById(R.id.imgDificil_15);
-        img16=findViewById(R.id.imgDificil_16);
+        img1=findViewById(R.id.imgConfig_1);
+        img2=findViewById(R.id.imgConfig_2);
+        img3=findViewById(R.id.imgConfig_3);
+        img4=findViewById(R.id.imgConfig_4);
+        img5=findViewById(R.id.imgConfig_5);
+        img6=findViewById(R.id.imgConfig_6);
+        img7=findViewById(R.id.imgConfig_7);
+        img8=findViewById(R.id.imgConfig_8);
+        img9=findViewById(R.id.imgConfig_9);
+        img10=findViewById(R.id.imgConfig_10);
+        img11=findViewById(R.id.imgConfig_11);
+        img12=findViewById(R.id.imgConfig_12);
+        img13=findViewById(R.id.imgConfig_13);
+        img14=findViewById(R.id.imgConfig_14);
+        img15=findViewById(R.id.imgConfig_15);
+        img16=findViewById(R.id.imgConfig_16);
 
     }
 
@@ -478,6 +479,7 @@ public class JuegoConfigActivity extends AppCompatActivity {
                 img15.getVisibility()==View.INVISIBLE &&
                 img16.getVisibility()==View.INVISIBLE){
 
+            downTimer.cancel();
             Datos datos=new Datos(this);
             Puntaje puntaje=new Puntaje();
             if (puntosJ1>puntosJ2){
@@ -498,11 +500,17 @@ public class JuegoConfigActivity extends AppCompatActivity {
             }
             String message=nomJ1.getText().toString()+":"+puntosJ1 +"\n"+
                     nomJ2.getText().toString()+":"+puntosJ2 +"\n"+
-                    "Tiempo:"+tiempo.getText().toString();
+                    "Tiempo Restante:"+tiempo.getText().toString()+" Seg";
 
             Constantes.dialogo(this,message);
 
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        downTimer.cancel();
     }
 }
