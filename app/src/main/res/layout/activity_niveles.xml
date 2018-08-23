@@ -4,51 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".activities.NivelesActivity">
 
-    <Button
-        android:id="@+id/btnFacil"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="150dp"
-        android:background="@drawable/btn_facil"
-        android:onClick="jugar"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/niveles_1" />
 
-    <Button
-        android:id="@+id/btnNormal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/btn_dificil"
-        android:onClick="jugar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDificil" />
+        <Button
+            android:id="@+id/btnFacil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn_facil"
+            android:onClick="jugar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <Button
-        android:id="@+id/btnDificil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        <Button
+            android:id="@+id/btnNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_dificil"
+            android:onClick="jugar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDificil" />
 
-        android:background="@drawable/btn_medio"
-        android:onClick="jugar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFacil" />
+        <Button
+            android:id="@+id/btnDificil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_medio"
+            android:onClick="jugar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFacil"
+            tools:ignore="MissingConstraints" />
 </android.support.constraint.ConstraintLayout>
