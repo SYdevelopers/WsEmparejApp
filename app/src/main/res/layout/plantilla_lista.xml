@@ -10,7 +10,7 @@
         android:id="@+id/textView_puntajes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/background_light"
+        android:textColor="?attr/colorControlActivated"
         android:textSize="20sp"
         app:fontFamily="@font/biryani_extrabold" />
 
@@ -18,7 +18,7 @@
         android:id="@+id/textView_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/background_light"
+        android:textColor="?attr/colorControlActivated"
         android:textSize="24sp"
         android:textStyle="bold"
         app:fontFamily="@font/biryani_extrabold" />
