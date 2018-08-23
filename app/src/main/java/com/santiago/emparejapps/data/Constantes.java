@@ -9,6 +9,7 @@ public class Constantes implements BaseColumns {
     public final static String TBL_PUNTAJES="puntajes";
     public final static String NOMBRE="nombre";
     public final static String PUNTOS="puntos";
+
     public final static String NIVEL="nivel";
     public final static String TIEMPO="tiempo";
 
