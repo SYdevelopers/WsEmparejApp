@@ -68,7 +68,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/no" />
+                android:src="@drawable/centro_facil" />
 
             <ImageView
                 android:id="@+id/imgFacil_5"
@@ -130,7 +130,8 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:background="@drawable/texto_juego_1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/nombreJ1"
@@ -145,6 +146,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:text="0"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -157,7 +159,8 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:background="@drawable/texto_juego_1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/nombreJ2"
@@ -172,6 +175,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:text="0"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
