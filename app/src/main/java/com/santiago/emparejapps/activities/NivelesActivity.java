@@ -21,11 +21,11 @@ public class NivelesActivity extends AppCompatActivity {
                 startActivity(new Intent(this,JuegoFacilActivity.class));
                 break;
             case R.id.btnNormal:
-                startActivity(new Intent(this,JuegoFacilActivity.class));
+                startActivity(new Intent(this,JuegoNormalActivity.class));
                 break;
 
             case R.id.btnDificil:
-                startActivity(new Intent(this,JuegoFacilActivity.class));
+                startActivity(new Intent(this,JuegoDificilActivity.class));
                 break;
 
 
