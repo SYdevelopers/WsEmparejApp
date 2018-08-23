@@ -10,7 +10,7 @@ import com.santiago.emparejapps.model.Puntaje;
 public class Datos extends SQLiteOpenHelper {
     SQLiteDatabase db;
     public Datos(Context context) {
-        super(context, "emparej.db", null, 1);
+        super(context, "Emparej.db", null, 1);
     }
 
     @Override

@@ -4,13 +4,13 @@ public class Puntaje {
     private String nombre;
     private int puntos;
     private String nivel;
-    private int tiempo;
+    private String tiempo;
 
     public static String nomJ1="",nomJ2="";
     public Puntaje() {
     }
 
-    public Puntaje(String nombre, int puntos, String nivel, int tiempo) {
+    public Puntaje(String nombre, int puntos, String nivel, String tiempo) {
         this.nombre = nombre;
         this.puntos = puntos;
         this.nivel = nivel;
@@ -41,11 +41,11 @@ public class Puntaje {
         this.nivel = nivel;
     }
 
-    public int getTiempo() {
+    public String getTiempo() {
         return tiempo;
     }
 
-    public void setTiempo(int tiempo) {
+    public void setTiempo(String tiempo) {
         this.tiempo = tiempo;
     }
 }

@@ -1,6 +1,9 @@
 package com.santiago.emparejapps.data;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.provider.BaseColumns;
+import android.support.v7.app.AlertDialog;
 
 public class Constantes implements BaseColumns {
     public final static String TBL_PUNTAJES="puntajes";
@@ -15,6 +18,34 @@ public class Constantes implements BaseColumns {
             Constantes.NOMBRE + " TEXT,"+
             Constantes.PUNTOS + " INTEGER,"+
             Constantes.NIVEL + " TEXT,"+
-            Constantes.TIEMPO + " INTEGER)";
+            Constantes.TIEMPO + " TEXT)";
+
+    public static void dialogo(final Activity activity, String message){
+        AlertDialog.Builder builder=new AlertDialog.Builder(activity);
+        builder.setTitle("Resultados")
+                .setMessage(message)
+                .setNegativeButton("Terminar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        activity.finish();
+                    }
+                })
+                .setNeutralButton("twitter", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .setPositiveButton("facebook", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .setCancelable(false);
+        AlertDialog dialog=builder.create();
+        dialog.show();
+    }
 
 }

@@ -1,16 +1,21 @@
 package com.santiago.emparejapps.activities;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.santiago.emparejapps.R;
+import com.santiago.emparejapps.data.Constantes;
+import com.santiago.emparejapps.data.Datos;
 import com.santiago.emparejapps.model.Puntaje;
 
 import java.util.Arrays;
@@ -428,6 +433,29 @@ public class JuegoDificilActivity extends AppCompatActivity {
             img15.getVisibility()==View.INVISIBLE &&
             img16.getVisibility()==View.INVISIBLE){
             tiempo.stop();
+            Datos datos=new Datos(this);
+            Puntaje puntaje=new Puntaje();
+            if (puntosJ1>puntosJ2){
+                puntaje.setNombre(nomJ1.getText().toString());
+                puntaje.setPuntos(puntosJ1);
+                puntaje.setNivel(nivel);
+                puntaje.setTiempo(tiempo.getText().toString());
+            }else{
+                puntaje.setNombre(nomJ2.getText().toString());
+                puntaje.setPuntos(puntosJ2);
+                puntaje.setNivel(nivel);
+                puntaje.setTiempo(tiempo.getText().toString());
+            }
+            if (datos.guardarPuntaje(puntaje)){
+                Toast.makeText(this, "guardo", Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(this, "no guardo", Toast.LENGTH_SHORT).show();
+            }
+            String message=nomJ1.getText().toString()+":"+puntosJ1 +"\n"+
+                            nomJ2.getText().toString()+":"+puntosJ2 +"\n"+
+                            "Tiempo:"+tiempo.getText().toString();
+
+            Constantes.dialogo(this,message);
 
         }
 
