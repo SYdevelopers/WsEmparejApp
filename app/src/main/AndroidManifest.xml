@@ -9,21 +9,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.SplashActivity">
+        <activity android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.NombresActivity" />
-        <activity android:name=".activities.InicioActivity" />
-        <activity android:name=".activities.PuntajesActivity" />
-        <activity android:name=".activities.ConfiguracionActivity" />
-        <activity android:name=".activities.NivelesActivity" />
-        <activity android:name=".activities.JuegoDificilActivity" />
-        <activity android:name=".activities.JuegoNormalActivity" />
-        <activity android:name=".activities.JuegoFacilActivity"></activity>
+        <activity android:name=".activities.NombresActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.InicioActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.PuntajesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.ConfiguracionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.NivelesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.JuegoDificilActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.JuegoNormalActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.JuegoFacilActivity"
+            android:screenOrientation="portrait"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
