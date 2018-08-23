@@ -27,7 +27,7 @@ public class PuntajesActivity extends AppCompatActivity {
         llenarListaFacil(listaFacil);
         llenarListaNormal(listaNormal);
         llenarListaDificil(listaDificil);
-        llenarListaConfig(listaConfig);
+        //llenarListaConfig(listaConfig);
     }
 
     private void llenarListaFacil(ListView lista) {
@@ -45,12 +45,12 @@ public class PuntajesActivity extends AppCompatActivity {
         adapter=new SimpleCursorAdapter(this,R.layout.plantilla_lista,cursor,camposBD,camposUI);
         lista.setAdapter(adapter);
     }
-    private void llenarListaConfig(ListView lista) {
-        cursor=datos.listarJuegoConfig();
-
-        adapter=new SimpleCursorAdapter(this,R.layout.plantilla_lista,cursor,camposBD,camposUI);
-        lista.setAdapter(adapter);
-    }
+//    private void llenarListaConfig(ListView lista) {
+//        cursor=datos.listarJuegoConfig();
+//
+//        adapter=new SimpleCursorAdapter(this,R.layout.plantilla_lista,cursor,camposBD,camposUI);
+//        lista.setAdapter(adapter);
+//    }
 
     private void inicializar() {
         listaFacil=findViewById(R.id.lista_facil);
