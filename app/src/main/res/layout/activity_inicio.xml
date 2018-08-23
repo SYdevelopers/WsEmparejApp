@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.InicioActivity">
+
+    <Button
+        android:id="@+id/btnJugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="102dp"
+        android:text="Button"
+        android:onClick="next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="Button"
+        android:onClick="next"
+        app:layout_constraintStart_toStartOf="@+id/btnJugar"
+        app:layout_constraintTop_toBottomOf="@+id/btnJugar" />
+
+    <Button
+        android:id="@+id/btnPuntaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:text="Button"
+        android:onClick="next"
+        app:layout_constraintStart_toStartOf="@+id/btnConfig"
+        app:layout_constraintTop_toBottomOf="@+id/btnConfig" />
+</android.support.constraint.ConstraintLayout>
