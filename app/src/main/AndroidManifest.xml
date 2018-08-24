@@ -47,7 +47,8 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".activities.JuegoConfigActivity"></activity>
+        <activity android:name=".activities.JuegoConfigActivity"
+            android:screenOrientation="portrait" ></activity>
     </application>
 
 </manifest>
