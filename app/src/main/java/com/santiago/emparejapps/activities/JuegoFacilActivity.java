@@ -1,5 +1,6 @@
 package com.santiago.emparejapps.activities;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Handler;
@@ -56,6 +57,7 @@ public class JuegoFacilActivity extends AppCompatActivity {
         }
     }
 
+    //darle un drawabel a las cartas
     private void cargarParejas() {
         im1=R.drawable.i1;
         im2=R.drawable.i2;
@@ -70,6 +72,7 @@ public class JuegoFacilActivity extends AppCompatActivity {
 
     }
 
+    //asignar un tag a las imagenes
     private void asignarTags() {
         img1.setTag("0");
         img2.setTag("1");
@@ -82,10 +85,12 @@ public class JuegoFacilActivity extends AppCompatActivity {
 
     }
 
+    //mezclar las cartas
     private void barajarCartas() {
         Collections.shuffle(Arrays.asList(cartasArray));
     }
 
+    //inicializar los elementos de la vista
     private void inicializar() {
         nomJ1=findViewById(R.id.nombreJ1);
         nomJ2=findViewById(R.id.nombreJ2);
@@ -106,6 +111,7 @@ public class JuegoFacilActivity extends AppCompatActivity {
 
     }
 
+    //hablitar las cartas
     private void habilitarCartas(){
         img1.setEnabled(true);
         img2.setEnabled(true);
@@ -118,6 +124,7 @@ public class JuegoFacilActivity extends AppCompatActivity {
 
     }
 
+    //dessabilitar las cartas
     private void desabilitarCartas(){
         img1.setEnabled(false);
         img2.setEnabled(false);
@@ -130,6 +137,7 @@ public class JuegoFacilActivity extends AppCompatActivity {
 
     }
 
+    //metodo para mostrar la imagen al voltear
     private void voltearCartas(){
         img1.setImageResource(R.drawable.no);
         img2.setImageResource(R.drawable.no);
@@ -142,6 +150,7 @@ public class JuegoFacilActivity extends AppCompatActivity {
 
     }
 
+    //metodo para veridicar las imagenes de las cartas
     public void imagenSeleccionada(View view) {
         int tag =Integer.parseInt((String) view.getTag());
         if (view.getId()==img1.getId()){
@@ -171,6 +180,7 @@ public class JuegoFacilActivity extends AppCompatActivity {
 
     }
 
+    //asignar las cartas que haran pareja
     private void asignarParejas(ImageView img, int tag) {
         switch (cartasArray[tag]){
             case 11:img.setImageResource(R.drawable.i1);
@@ -217,6 +227,7 @@ public class JuegoFacilActivity extends AppCompatActivity {
         }
     }
 
+    //verificar si las cartas seleccionadas son correctas
     private void verificarSelccion() {
         if (primeraCarta==segundaCarta){
             player=MediaPlayer.create(this,R.raw.win);
@@ -301,6 +312,7 @@ public class JuegoFacilActivity extends AppCompatActivity {
         verificarUltimaCarta();
     }
 
+    //metodo para verificar si todas las cartas ya se voltearon
     private void verificarUltimaCarta() {
         if (img1.getVisibility()==View.INVISIBLE &&
                 img2.getVisibility()==View.INVISIBLE &&
@@ -337,5 +349,11 @@ public class JuegoFacilActivity extends AppCompatActivity {
 
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
