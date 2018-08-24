@@ -31,7 +31,7 @@
         android:layout_marginRight="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="50dp"
-        android:background="@drawable/texto_1"
+        android:background="@drawable/fondo_texto"
         android:ems="10"
         android:hint="Tiempo de juego en segundos"
         android:inputType="number"
